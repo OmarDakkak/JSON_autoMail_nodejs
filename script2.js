@@ -14,7 +14,7 @@ fileContent = JSON.parse(file);
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'Mail', // votre mail ici
+      user: 'votre_mail@gmail.com', // votre mail ici
       pass: 'mot_de_passe' // votre mot de passe ici
     }
   });
@@ -23,7 +23,7 @@ for(var i=0; i < fileContent.Feuil1.length; i++){
     mail = toString(fileContent.Feuil1[i].MailPersonnel);
     console.log(mail);
     var mailOptions = {
-        from: 'ahmed.dakkak@gmail.com',
+        from: 'votre_mail@gmail.com',
         to: `${fileContent.Feuil1[i].MailPersonnel}`,
         subject: 'Adresse Email Academique',
         text: `Voici votre adresse email academique : ${fileContent.Feuil1[i].MailAcademique}, pour le mot de passe c'est votre CNE!! `
