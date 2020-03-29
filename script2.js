@@ -32,7 +32,6 @@ for(var i=0; i < fileContent.Feuil1.length; i++){
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);
-          console.log('Ana 7mar');
         } else {
           console.log('Email sent: ' + info.response);
         }
